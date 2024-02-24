@@ -175,5 +175,9 @@ footer {
     line-height: 47px;
 }
 
+.bx-wrapper, .bx-viewport {
+    height: 250px !important;
+}
+
 
 
