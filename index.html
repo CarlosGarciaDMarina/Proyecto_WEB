@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Estilos CSS -->
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <link id="theme" rel="stylesheet" type="text/css" href="CSS/green.css">
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -16,11 +17,22 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
+        <!-- Moment.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script> <!--Libreria-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/locale/es.min.js"></script>
+
         <!-- Scripts -->
         <script type="text/javascript" src="JS/main.js"></script>
         
     </head>
     <body>
+
+        <div id="selector-theme">
+            <div id="to-green"></div>
+            <div id="to-red"></div>
+            <div id="to-blue"></div>
+        </div>
+
         <section id="global">
 
             <!-- Cabecera -->
@@ -61,43 +73,7 @@
             <!-- Contenido -->
             <section id="content">
                 <div id="posts">
-                    <article class="post">
-                        <h2>Título del artículo</h2>
-                        <span class="date">Fecha de publicación</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
-                            Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, 
-                            sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec 
-                            vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit 
-                            placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.
-                        </p>
-                        <a href="#" class="button-more">Leer más...</a>
-                    </article>
-                    <article class="post">
-                        <h2>Título del artículo</h2>
-                        <span class="date">Fecha de publicación</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
-                            Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, 
-                            sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec 
-                            vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit 
-                            placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.
-                        </p>
-                        <a href="#" class="button-more">Leer más...</a>
-                    </article>
-                    <article class="post">
-                        <h2>Título del artículo</h2>
-                        <span class="date">Fecha de publicación</span>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
-                            Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, 
-                            sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec 
-                            vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit 
-                            placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.
-                        </p>
-                        <a href="#" class="button-more">Leer más...</a>
-                    </article>
-
+                    <!-- Cargamos los post desde el JSON -->
                 </div>
                 <aside id="sidebar">
                     <div id="about">

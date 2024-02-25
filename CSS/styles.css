@@ -28,7 +28,6 @@ body {
     font-size: 30px;
     letter-spacing: 4px;
     line-height: 80px;
-    background-color: #235E3D;
     color: #FFF;
     text-align: center;
     width: 500px;
@@ -36,7 +35,6 @@ body {
     margin-bottom: 20px;
     float: left;
     text-transform: uppercase;
-
 }
 
 #menu {
@@ -57,10 +55,6 @@ body {
 #menu ul li {
     height: 43px;
     display: inline-block;
-}
-
-#menu ul li:hover {
-    background: #235E3D;
 }
 
 #menu a {
@@ -103,7 +97,6 @@ body {
     font-size: 14px;
     text-align: center;
     padding: 15px;
-    background: #235E3D;
     color:  #FFF;
     text-decoration: none;
     margin-top: 10px;
@@ -179,5 +172,34 @@ footer {
     height: 250px !important;
 }
 
+#selector-theme{
+    position: fixed;
+    top: 40%;
+    background-color: rgba(51, 51, 51, 0.5);
+    width: 50px;
+    height: 100px;
 
+}
 
+#to-green,
+#to-red,
+#to-blue{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #FFF;
+    display: block;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+#to-green {
+    background-color: #235E3D;
+}
+
+#to-red {
+    background-color: #CA3413;
+}
+
+#to-blue {
+    background-color: #1F87C4;
+}
