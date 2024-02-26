@@ -130,14 +130,37 @@ $(document).ready(function(){
   
   }
 
+  // Reloj
+  if (window.location.href.indexOf('reloj') > -1) {
+    // Esta funcion nos permite ejecutar en bucle en cada tiempo que le indiquemos, las instrucciones que nosotros le indiquemos
+    setInterval(function(){
+      // Almacenamos el metodo en la variable reloj
+      var reloj = moment().format('hh:mm:ss');
+      // Incrustamos la variable en el div 
+      $("#reloj").html(reloj);
+    }, 1000);
+
+  }
+
+  //Validación del formulario
+  if (window.location.href.indexOf('contact') > -1) {
+
+    // Marcamos todos los campos del formulario cuyo name sea date
+    //Para cambiarle el formato al datepicker le pasamos un Json
+    $("form input[name='date").datepicker({
+      dateFormat: 'dd-mm-yy'
+    });
+
+    $.validate({
+      lang: 'es',
+      errorMessagePosition:'top',
+      scrollToTopOnError: true
+    });
+  }
 
 
 
-
-
-
-
-
+/**<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script> */
 
 
 

@@ -6,18 +6,24 @@
         <title>Proyecto WEB</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- Estilos CSS -->
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
         <link id="theme" rel="stylesheet" type="text/css" href="CSS/green.css">
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
         <!--Para el elemento resizable necesitamos cargar una libreria antes de la de UI-->
         <link rel="stylesheet" href="JS/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.min.css" />
         <link rel="stylesheet" href="JS/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.structure.min.css" />
         <link rel="stylesheet" href="JS/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.theme.min.css" />
+
         <!--jQueryUI-->
         <script type="text/javascript" src="JS/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script> 
+
+        <!-- Plugin validacion -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
         <!-- Scripts -->
         <script type="text/javascript" src="JS/main.js"></script>
@@ -60,31 +66,41 @@
             <!-- Contenido -->
             <section id="content">
                 <div id="box">
-                    <!-- Cargamos el acordeon -->
-                    <h2>Sobre mí</h2>
-                    <div id="acordeon">
-                        <h3>¿Quienes somos?</h3>
-                        <div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
-                                Mauris non lorem ex.     
-                            </p>
-                        </div>
-                        <h3>Nuestros servicios</h3>
-                        <div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
-                                Mauris non lorem ex.     
-                            </p>
-                        </div>                        
-                        <h3>Nuestros clientes</h3>
-                        <div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
-                                Mauris non lorem ex.     
-                            </p>
-                        </div>
-                    </div>
+                    <!-- Cargar formulario de contacto -->
+                    <h2>Contacto</h2>
+
+                    <!--
+                        Para que funcione hay que ponerle el atributo data-validation ="" para que la libreria lopueda reconocer
+                        data-validation =""
+                        data-validation-length =""
+                        data-validation-format =""
+                        data-validation =""
+                    -->
+
+                    <form action="" method="POST" id="form_contact">
+                        <label for="name">Nombre</label>
+                        <input type="text" name ="name" data-validation="alphanumeric" />
+
+                        <label for="surname">Apellidos</label>
+                        <input type="text" name ="surname" data-validation="alphanumeric"/>
+
+                        <label for="age">Edad</label>
+                        <input type="number" name ="age" data-validation="number"/>
+
+                        <label for="sex">Sexo</label>
+                        <select name="sex" data-validation="required">
+                            <option value="man">Hombre</option>
+                            <option value="woman">Mujer</option>
+                        </select>
+
+                        <label for="date">Fecha de nacimiento</label>
+                        <input type="text" name ="date" data-validation="date" data-validation-format="dd-mm-yyyy"/>
+
+                        <label for="email">Email</label>
+                        <input type="text" name ="email" data-validation="email"/>
+
+                        <input type="submit" value="Enviar" />
+                    </form>
                 </div>
                 <aside id="sidebar">
                     <div id="about">
