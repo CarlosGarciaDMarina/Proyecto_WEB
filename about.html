@@ -12,14 +12,12 @@
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-        <!-- Slider -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-        <!-- Moment.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script> <!--Libreria-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/locale/es.min.js"></script>
+        <!--Para el elemento resizable necesitamos cargar una libreria antes de la de UI-->
+        <link rel="stylesheet" href="JS/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.min.css" />
+        <link rel="stylesheet" href="JS/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.structure.min.css" />
+        <link rel="stylesheet" href="JS/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.theme.min.css" />
+        <!--jQueryUI-->
+        <script type="text/javascript" src="JS/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script> 
 
         <!-- Scripts -->
         <script type="text/javascript" src="JS/main.js"></script>
@@ -59,18 +57,34 @@
                     </ul>
                 </nav>
             </header>
-            <!-- Slider -->
-            <div id="slider">
-                <div class="galeria">
-                    <div><img src="img/hojas.jpg" title="Hojas" /></div>
-                    <div><img src="img/rojo.jpg" title="The long and winding road" /></div>
-                    <div><img src="img/cielo.jpg" title="Happy trees" /></div>
-                  </div>
-            </div>
             <!-- Contenido -->
             <section id="content">
-                <div id="posts">
-                    <!-- Cargamos los post desde el JSON -->
+                <div id="box">
+                    <!-- Cargamos el acordeon -->
+                    <h2>Sobre mí</h2>
+                    <div id="acordeon">
+                        <h3>¿Quienes somos?</h3>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
+                                Mauris non lorem ex.     
+                            </p>
+                        </div>
+                        <h3>Nuestros servicios</h3>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
+                                Mauris non lorem ex.     
+                            </p>
+                        </div>                        
+                        <h3>Nuestros clientes</h3>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. 
+                                Mauris non lorem ex.     
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <aside id="sidebar">
                     <div id="about">

@@ -1,62 +1,69 @@
 $(document).ready(function(){
 
   // Slider
-  $('.galeria').bxSlider({
-    mode: 'fade',
-    captions: true,
-    slideWidth: 1200
-  });
+  // Establecemos una condicion para que, si no estamos en la pagina del index, no nos cargue esta funcion
+  if (window.location.href.indexOf('index') > -1) {
+    $('.galeria').bxSlider({
+      mode: 'fade',
+      captions: true,
+      slideWidth: 1200
+    });
+  }
+
 
   // Posts
-  var posts = [
-    {
-      title: 'Prueba de titulo 1',
-      date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() /* tb puede ponerse: moment().format("dddd Do") */ + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
-      content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
-    },
-    {
-      title: 'Prueba de titulo 2',
-      date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
-      content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
-    },    
-    {
-      title: 'Prueba de titulo 3',
-      date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
-      content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
-    },    
-    {
-      title: 'Prueba de titulo 4',
-      date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
-      content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
-    },    
-    {
-      title: 'Prueba de titulo 5',
-      date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
-      content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
-    },
-    {
-      title: 'Prueba de titulo 6',
-      date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
-      content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
-    }
-  ];// End posts
+  // Establecemos una condicion para que, si no estamos en la pagina del index, no nos cargue esta funcion
+  if (window.location.href.indexOf('index') > -1) {
+    var posts = [
+      {
+        title: 'Prueba de titulo 1',
+        date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() /* tb puede ponerse: moment().format("dddd Do") */ + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
+        content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
+      },
+      {
+        title: 'Prueba de titulo 2',
+        date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
+        content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
+      },    
+      {
+        title: 'Prueba de titulo 3',
+        date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
+        content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
+      },    
+      {
+        title: 'Prueba de titulo 4',
+        date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
+        content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
+      },    
+      {
+        title: 'Prueba de titulo 5',
+        date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
+        content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
+      },
+      {
+        title: 'Prueba de titulo 6',
+        date: 'Publicado el ' + moment().format("dddd") + " " + moment().date() + " de " + moment().format("MMMM") + " de " + moment().format("YYYY"),
+        content:  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare turpis eget quam vulputate, ut interdum sapien tincidunt. Mauris non lorem ex. Pellentesque purus sapien, volutpat id sem vel, semper convallis velit. Vivamus fringilla suscipit dui, sollicitudin malesuada nunc fringilla mattis. Donec sollicitudin, nisl et hendrerit posuere, augue ligula eleifend sem, nec vestibulum velit neque sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque id arcu vel velit placerat pellentesque eleifend non lorem. Suspendisse fermentum elementum eros nec cursus.' 
+      }
+    ];// End posts
 
-  // Hacemos un forEach que recorra la estructura para añadir los posts
-  posts.forEach((item, index) =>{
-    // En cada iteracion que haga el forEach, voy a crear una variable que tenga una plantilla de un articulo formateada con los valores del json
-    var post = `
-        <article class="post">
-          <h2>${item.title}</h2>
-          <span class="date">${item.date}</span>
-          <p>
-            ${item.content}
-          </p>
-          <a href="#" class="button-more">Leer más...</a>
-          </article>
-    `;
-    //Lo incrustamos con append
-    $("#posts").append(post);
-  });// End forEach
+    // Hacemos un forEach que recorra la estructura para añadir los posts
+    posts.forEach((item, index) =>{
+      // En cada iteracion que haga el forEach, voy a crear una variable que tenga una plantilla de un articulo formateada con los valores del json
+      var post = `
+          <article class="post">
+            <h2>${item.title}</h2>
+            <span class="date">${item.date}</span>
+            <p>
+              ${item.content}
+            </p>
+            <a href="#" class="button-more">Leer más...</a>
+            </article>
+      `;
+      //Lo incrustamos con append
+      $("#posts").append(post);
+    });// End forEach
+  } // End if 
 
   // Selector de tema
   // Almacenamos el selector del tema en la variable theme
@@ -85,11 +92,11 @@ $(document).ready(function(){
 
   //Scroll hacia arriba de la web
   $('.subir').click(function(e){
-    e.preventDefault();
+    e.preventDefault(); // Este evento sirve para prevenir posible errores de red al hacer clic en el enlace
     $('html, body').animate({
-      scrollTop: 0
-    },1000);
-    return false;
+      scrollTop: 0 // Desplaza suavemente el scroll de la página hacia arriba hasta la posición 0 (parte superior de la página)
+    },1000); // La animación dura 1000 milisegundos (1 segundo)
+    return false; // Devuelve false para evitar el comportamiento predeterminado del enlace
   });
 
   //Login falso con local storage
@@ -114,10 +121,14 @@ $(document).ready(function(){
       localStorage.removeItem("form_name"); // Limpiamos el valor que haya en el fom_name
       location.reload(); // Forzamos la recarga de la poagina para poder cerrar la sesion del usuario
     });
-
   }
 
-
+  // Acordeon
+  if (window.location.href.indexOf('about') > -1) {
+    // Esta funcion hace un acordeon en la web
+    $("#acordeon").accordion();
+  
+  }
 
 
 
